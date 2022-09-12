@@ -1,17 +1,22 @@
-{% extends 'admin/base_admin.html' %}
+{% extends 'distance_from_mkad/base_distance_from_mkad.html' %}
 
 {% block content %}
 {{ super() }}
-<div id="login" class="wnd_dlg_back login_wnd">
-<div class="login">
-	<p class="title">Админ-панель</p>
+<div id="index" class="wnd_dlg_back index_wnd">
+<div class="index">
+	<p class="title">Для нахождения расстояния от МКАД до вашего адреса, введите адрес:</p>
 {% for cat, msg in get_flashed_messages(True) %}
 <div class="flash {{cat}}">{{msg}}</div>
 {% endfor %}
-	<form action="" method="post">
-		<p><label class="form-label">Логин: </label><input type="text" name="user" />
-		<p><label class="form-label">Пароль: </label><input type="password" name="psw" />
-		<p align="center"><input class="login_button" type="submit" value="Войти">
+	<form action="{{ url_for('.result') }}" method="post">
+		<p><label class="form-label">Город: </label><input type="text" name="city" />
+		<p><label class="form-label">Улица: </label><input type="text" name="street" />
+		<p><label class="form-label">Номер дома: </label><input type="text" name="house" />
+		<p><label class="form-label">Строение/корпус (если есть): </label><input type="text" name="building" />
+		<p align="center"><input class="index_button" type="submit" value="Рассчитать">
+		{% if error %}
+		<p>{{ error }}</p>
+		{% endif %}
 	</form>
 </div>
 </div>{% endblock %}

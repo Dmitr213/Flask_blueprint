@@ -1,0 +1,17 @@
+{% extends 'distance_from_mkad/base_distance_from_mkad.html' %}
+
+{% block content %}
+{{ super() }}
+<div id="index" class="wnd_dlg_back index_wnd">
+<div class="index">
+	<p class="title">Результат:</p>
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+	<form action="{{ url_for('.index') }}"  method="post">
+		<p>Расстояние от МКАДА до {{ city + ', ' + street + ' ' + house }} со следующими координатами
+			{{ coordinates }} составляет {{ 'm' }} км</p>
+		<p align="center"><input class="index_button" type="submit" value="Назад">
+	</form>
+</div>
+</div>{% endblock %}
