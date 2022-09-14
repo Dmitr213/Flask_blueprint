@@ -26,19 +26,20 @@ html, body {
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 }
+
 .wnd_dlg_back.index_wnd {
 	position: absolute;
 	left: 45%;
 	top: 40%;
 	width: 445px;
-	height: 325px;
+	height: 230px;
 	margin: -110px 0 0 -173px;
 	background: rgba(64, 65, 69, 0.2);
 }
 
 div.index {
 	width: 400px;
-	height: 280px;
+	height: 185px;
 	padding: 20px;
 	color: #c39000;
 	background: #fafdd1;
@@ -47,27 +48,40 @@ div.index {
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 }
+
 div.index p {
 	margin: 0 0 10px 0;
 }
+
 div.index p a {
 	color: #777;
 }
+
 div.index .title {
 	text-align: center;
 	color: #000;
 	font-size: 24px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
+
+div.index .title_result {
+	text-align: center;
+	color: #000;
+	font-size: 24px;
+	margin-bottom: 30px;
+}
+
 .index_input {
-	font-size: 16px;
+	font-size: 14px;
 	width: 100%;
-	background: #041B40;
-	color: #fff;
+	line-height: 1.5;
+	background: #ffffff;
+	color: #000;
 }
+
 .index_button {
 	color: #444;
-	margin-top: 10px;
+	margin-top: 15px;
 	font-size: 14px;
 	padding: 2px;
 	min-width: 200px
@@ -79,9 +93,9 @@ div.index .title {
 }
 
 .flash {
-	padding: 10px;
+	padding: 2px;
 	color: #444;
-	margin: -30px 0 10px 0;
+	margin: -10px 0 10px 0;
 }
 .flash.success {
 	border: 1px solid #21DB56;
@@ -90,48 +104,5 @@ div.index .title {
 .flash.error {
 	border: 1px solid #FF4343;
 	background: #FF9C9C;
-}
-
-ul.mainmenu {
-	list-style: none;
-	background: #fafdd1;
-	height: 40px;
-	margin: 0;
-	padding: 0;
-	color: #444;
-	font-size: 20px;
-	overflow: hidden;
-}
-ul.mainmenu li {
-	float: left;
-	margin: 8px 40px 0 50px;
-}
-ul.mainmenu li.last {float: right;}
-
-ul.mainmenu li a {
-	color: #444;
-	text-decoration: none;
-}
-ul.mainmenu li a:hover {
-	color: #777;
-}
-
-ul.list-posts {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	max-width: 600px;
-}
-ul.list-posts li {
-	margin: 20px 0 0 0;
-	border: 1px solid #eee;
-}
-ul.list-posts .title {
-	margin: 0;
-	padding: 5px;
-	background: #eee;
-}
-ul.list-posts .annonce {
-	margin: 0;
-	padding: 10px 5px 10px 5px;
+	height: 20px;
 }

@@ -4,19 +4,13 @@
 {{ super() }}
 <div id="index" class="wnd_dlg_back index_wnd">
 <div class="index">
-	<p class="title">Для нахождения расстояния от МКАД до вашего адреса, введите адрес:</p>
+	<p class="title">Для нахождения расстояния от МКАД до вашего адреса, введите адрес или название объекта:</p>
 {% for cat, msg in get_flashed_messages(True) %}
 <div class="flash {{cat}}">{{msg}}</div>
 {% endfor %}
 	<form action="{{ url_for('.result') }}" method="post">
-		<p><label class="form-label">Город: </label><input type="text" name="city" />
-		<p><label class="form-label">Улица: </label><input type="text" name="street" />
-		<p><label class="form-label">Номер дома: </label><input type="text" name="house" />
-		<p><label class="form-label">Строение/корпус (если есть): </label><input type="text" name="building" />
+		<input class="index_input" type="text" placeholder="Одинцово, Молодёжная 15" name="address" />
 		<p align="center"><input class="index_button" type="submit" value="Рассчитать">
-		{% if error %}
-		<p>{{ error }}</p>
-		{% endif %}
 	</form>
 </div>
 </div>{% endblock %}
