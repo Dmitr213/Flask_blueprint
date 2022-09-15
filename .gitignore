@@ -20,3 +20,5 @@ include/
 include/*
 
 env/
+
+distance_from_mkad/result.log
